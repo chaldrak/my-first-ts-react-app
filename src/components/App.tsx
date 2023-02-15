@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Greet from "./Greet";
 import Person from "./Person";
@@ -6,6 +5,9 @@ import PersonList from "./PersonList";
 import Status from "./Status";
 import Heading from "./Heading";
 import Oscar from "./Oscar";
+import Button from "./Button";
+import ButtonNew from "./ButtonNew";
+import Container from "./Container";
 
 function App() {
   const personName = {
@@ -41,6 +43,9 @@ function App() {
       <Person name={newPersonName} />
       <PersonList names={people} />
       <Status status="success" />
+      <Button handleClick={() => alert("Button clicked")} />
+      <ButtonNew handleClick={(e) => console.log("Clicked", e)} />
+      <Container styles={{ border: "1px solid black" }} />
     </div>
   );
 }
